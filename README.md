@@ -239,8 +239,8 @@ Contributions are welcome! Feel free to:
 ---
 
 ## 📝 License
+Distributed under the MIT License.
 
-This project is for educational purposes.
 
 ---
 
