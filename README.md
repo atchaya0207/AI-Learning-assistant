@@ -125,7 +125,7 @@ learnai-groq/
 ### Step 2 — Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/learnai-groq.git
+git clone https://github.com/YOUR_USERNAME/AI-Learning-assistant
 cd learnai-groq
 ```
 
