@@ -25,7 +25,7 @@ export default function Login({ onLogin }) {
   return (
     <div style={{ minHeight:'100vh', display:'flex', alignItems:'center', justifyContent:'center', background:'#010511' }}>
       <div style={{ background:'#4f083c', border:'1px solid #00050e', borderRadius:'14px', padding:'36px', width:'360px' }}>
-        <div style={{ fontSize:'24px', fontWeight:700, color:'#fbfcfd', marginBottom:'4px' }}>🧠 LearnAI</div>
+        <div style={{ fontSize:'24px', fontWeight:700, color:'#fbfcfd', marginBottom:'4px' }}>LearnAI</div>
         <div style={{ fontSize:'13px', color:'#f7f8fa', marginBottom:'28px' }}>Sign in to continue learning</div>
 
         {error && (

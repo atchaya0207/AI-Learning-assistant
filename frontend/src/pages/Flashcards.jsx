@@ -30,7 +30,7 @@ export default function Flashcards() {
   return (
     <div style={{ padding:'24px' }}>
       <div style={{ display:'flex', alignItems:'center', gap:'12px', marginBottom:'6px' }}>
-        <h2 style={{ color:'#01060c' }}>🗂️ Flashcard Generator</h2>
+        <h2 style={{ color:'#01060c' }}>Flashcard Generator</h2>
         <span style={{ fontSize:'12px', color:'#22d3a0', background:'#072820', padding:'3px 10px', borderRadius:'10px', border:'1px solid rgba(34,211,160,.3)' }}>Free AI</span>
       </div>
       <p style={{ color:'#000306', marginBottom:'20px', fontSize:'14px' }}>Enter a topic — click cards to flip</p>

@@ -20,14 +20,14 @@ export default function Dashboard() {
   }, [])
 
   const statCards = [
-    { label:'Questions Asked',     value:stats.questions,  color:'#4f8ef7', bg:'#0d1e3d', icon:'💬' },
-    { label:'Quizzes Completed',   value:stats.quizzes,    color:'#22d3a0', bg:'#072820', icon:'🧪' },
-    { label:'Flashcards Made',     value:stats.flashcards, color:'#a78bfa', bg:'#1a1040', icon:'🗂️' },
+    { label:'Questions Asked',     value:stats.questions,  color:'#4f8ef7', bg:'#0d1e3d' },
+    { label:'Quizzes Completed',   value:stats.quizzes,    color:'#22d3a0', bg:'#072820' },
+    { label:'Flashcards Made',     value:stats.flashcards, color:'#a78bfa', bg:'#1a1040' },
   ]
 
   return (
     <div style={{ padding:'24px', maxWidth:'800px', margin:'0 auto' }}>
-      <h2 style={{ color:'#010409', marginBottom:'4px' }}>👋 Welcome back, {userName}!</h2>
+      <h2 style={{ color:'#010409', marginBottom:'4px' }}> Welcome back, {userName}!</h2>
       <p style={{ color:'#020912', marginBottom:'24px', fontSize:'14px' }}>Here's your learning progress</p>
 
       {loading ? (
@@ -51,14 +51,14 @@ export default function Dashboard() {
                 {stats.avgScore}%
               </div>
               <div style={{ fontSize:'12px', color:'#4a5568', marginTop:'4px' }}>
-                {stats.avgScore >= 70 ? '🎉 Great job!' : '💪 Keep practising!'}
+                {stats.avgScore >= 70 ? 'Great job!' : 'Keep practising!'}
               </div>
             </div>
           )}
 
           {stats.questions === 0 && stats.quizzes === 0 && stats.flashcards === 0 && (
             <div style={{ textAlign:'center', padding:'40px', color:'#4a5568', fontSize:'14px' }}>
-              No activity yet — start by asking the AI tutor a question! 🚀
+              No activity yet — start by asking the AI tutor a question! 
             </div>
           )}
         </>

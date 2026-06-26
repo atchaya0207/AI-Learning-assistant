@@ -4,7 +4,7 @@ import { askAI } from '../services/api'
 
 export default function Chat() {
   const [messages, setMessages] = useState([
-    { role:'assistant', content:'👋 Hi! I\'m your AI tutor powered by Groq + Llama 3 (free!). Ask me anything about coding (JS, Python, React) or language learning!' }
+    { role:'assistant', content:'Hi! I\'m your AI tutor powered by Groq + Llama 3. Ask me anything about coding (JS, Python, React) or language learning!' }
   ])
   const [input,   setInput]   = useState('')
   const [topic,   setTopic]   = useState('JavaScript')
@@ -30,9 +30,9 @@ export default function Chat() {
   return (
     <div style={{ display:'flex', flexDirection:'column', height:'100vh', padding:'20px', maxWidth:'800px', margin:'0 auto' }}>
       <div style={{ display:'flex', alignItems:'center', gap:'12px', marginBottom:'14px' }}>
-        <h2 style={{ color:'#010408' }}>💬 AI Tutor</h2>
+        <h2 style={{ color:'#010408' }}>AI Tutor</h2>
         <span style={{ fontSize:'12px', color:'#22d3a0', background:'#072820', padding:'3px 10px', borderRadius:'10px', border:'1px solid rgba(34,211,160,.3)' }}>
-          Groq + Llama 3 — Free
+          Groq + Llama 3
         </span>
       </div>
 
@@ -65,7 +65,7 @@ export default function Chat() {
           style={{ flex:1, background:'none', border:'none', outline:'none', fontSize:'13px', color:'#e2e8f0' }} />
         <button onClick={send} disabled={loading}
           style={{ padding:'8px 18px', background:'#4f8ef7', color:'white', border:'none', borderRadius:'8px', cursor:'pointer', fontWeight:600, fontSize:'13px' }}>
-          Send ↗
+          Send 
         </button>
       </div>
     </div>

@@ -7,16 +7,16 @@ export default function Sidebar({ user, onLogout }) {
   const location = useLocation()
 
   const links = [
-    { path:'/',           label:'📊 Dashboard' },
-    { path:'/chat',       label:'💬 AI Tutor'  },
-    { path:'/quiz',       label:'🧪 Quiz'      },
-    { path:'/flashcards', label:'🗂️ Flashcards' },
+    { path:'/',           label:'Dashboard' },
+    { path:'/chat',       label:'AI Tutor'  },
+    { path:'/quiz',       label:'Quiz'      },
+    { path:'/flashcards', label:'Flashcards' },
   ]
 
   return (
     <div style={{ width:'210px', background:'#4f083c', color:'white', display:'flex', flexDirection:'column', height:'100vh', flexShrink:0 }}>
       <div style={{ padding:'18px 16px', borderBottom:'1px solid #440c49' }}>
-        <div style={{ fontSize:'17px', fontWeight:700, color:'#eff2f6' }}>🧠 AI Learning Assistant</div>
+        <div style={{ fontSize:'17px', fontWeight:700, color:'#eff2f6' }}>AI Learning Assistant</div>
         <div style={{ fontSize:'11px', color:'#f4f9f8', marginTop:'3px' }}>Groq + Llama 3</div>
       </div>
 
@@ -36,7 +36,7 @@ export default function Sidebar({ user, onLogout }) {
       </nav>
 
       <div style={{ padding:'14px 16px', borderTop:'1px solid #4a1e3e' }}>
-        <div style={{ fontSize:'12px', color:'#86a0c4', marginBottom:'8px' }}>👤 {user.name}</div>
+        <div style={{ fontSize:'12px', color:'#86a0c4', marginBottom:'8px' }}>{user.name}</div>
         <button onClick={onLogout}
           style={{ width:'100%', padding:'7px', background:'#1e2d4a', color:'#94a3b8', border:'none', borderRadius:'7px', cursor:'pointer', fontSize:'12px' }}>
           Logout

@@ -31,7 +31,7 @@ export default function Quiz() {
   return (
     <div style={{ padding:'24px', maxWidth:'700px', margin:'0 auto' }}>
       <div style={{ display:'flex', alignItems:'center', gap:'12px', marginBottom:'6px' }}>
-        <h2 style={{ color:'#000409' }}>🧪 Quiz Generator</h2>
+        <h2 style={{ color:'#000409' }}>Quiz Generator</h2>
         <span style={{ fontSize:'12px', color:'#22d3a0', background:'#072820', padding:'3px 10px', borderRadius:'10px', border:'1px solid rgba(34,211,160,.3)' }}>Free AI</span>
       </div>
       <p style={{ color:'#000308', marginBottom:'20px', fontSize:'14px' }}>Enter any topic — Groq AI builds a quiz instantly</p>
@@ -42,7 +42,7 @@ export default function Quiz() {
           style={{ flex:1, padding:'10px 14px', borderRadius:'8px', border:'1px solid #1e2d4a', background:'#4f083c', color:'#e2e8f0', fontSize:'14px', outline:'none' }} />
         <button onClick={handleGenerate} disabled={loading}
           style={{ padding:'10px 20px', background:'#00050c', color:'white', border:'none', borderRadius:'8px', cursor:'pointer', fontWeight:600, whiteSpace:'nowrap' }}>
-          {loading ? 'Generating...' : 'Generate ↗'}
+          {loading ? 'Generating...' : 'Generate'}
         </button>
       </div>
 
@@ -72,9 +72,10 @@ export default function Quiz() {
       )}
 
       {result && (
-        <div style={{ textAlign:'center', padding:'36px', background:'#0f1526', border:'1px solid #1e2d4a', borderRadius:'12px' }}>
-          <div style={{ fontSize:'48px', marginBottom:'10px' }}>{result.score >= 70 ? '🎉' : '💪'}</div>
-          <h2 style={{ color:'#22d3a0', marginBottom:'6px' }}>Score: {result.score}%</h2>
+        <div style={{ textAlign:'center', padding:'36px', background:'#090c15', border:'1px solid #1e2d4a', borderRadius:'12px' }}>
+          <div style={{fontSize: '48px', marginBottom: '10px', color: result.score >= 70 ? '#22d3a0' : '#ff6b6b'}}>
+          {result.score >= 70 ? 'Good Job' : 'Keep Practicing'}</div>
+          <h2 style={{ color:'#eff7f4', marginBottom:'6px' }}>Score: {result.score}%</h2>
           <p style={{ color:'#94a3b8', marginBottom:'24px' }}>{result.correct} of {result.total} correct</p>
           <button onClick={() => { setQuiz(null); setResult(null); setTopic('') }}
             style={{ padding:'10px 24px', background:'#4f8ef7', color:'white', border:'none', borderRadius:'8px', cursor:'pointer', fontWeight:600 }}>
@@ -82,6 +83,6 @@ export default function Quiz() {
           </button>
         </div>
       )}
-    </div>
+    </div> 
   )
 }
